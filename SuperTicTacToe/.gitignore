@@ -1,9 +1,13 @@
-# .NET build output folders
-/bin/
-/obj/
 
-# User-specific files
-.idea/              # Rider
+.DS_Store
+.idea/
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+
+
 .vs/                # Visual Studio
 .vscode/            # VS Code
 
@@ -11,17 +15,11 @@
 Thumbs.db
 ehthumbs.db
 
-# macOS-specific files
-.DS_Store
-
 # Ignore appsettings for security reasons (Optional)
 appsettings.Development.json
 
 # IDE-related files
 /developer         # Ignore Rider's .developer file
-
-# Ignore generated files such as NuGet packages
-packages/
 
 # Ignore Visual Studio code coverage files
 *.vsp
@@ -33,3 +31,4 @@ packages/
 *.userosscache
 *.suo
 *.userprefs
+
