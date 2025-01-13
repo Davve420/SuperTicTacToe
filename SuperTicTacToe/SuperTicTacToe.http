@@ -1,0 +1,6 @@
+@SuperTicTacToe_HostAddress = http://localhost:5208
+
+GET {{SuperTicTacToe_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

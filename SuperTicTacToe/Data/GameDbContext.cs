@@ -7,6 +7,14 @@ namespace SuperTicTacToe.Data
     {
         public GameDbContext(DbContextOptions<GameDbContext> options) : base(options) { }
 
-        public DbSet<Question> Questions { get; set; }  // Represents the "Questions" table in your database.
+        public DbSet<Question> Questions { get; set; }
+
+        // Override the default table naming conventions (use PascalCase)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Question>()
+                .ToTable("Questions"); // Make sure EF uses the "Questions" table name (with uppercase Q)
+        }
     }
 }
